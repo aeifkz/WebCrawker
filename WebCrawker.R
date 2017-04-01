@@ -13,13 +13,13 @@ WebCrawker.getBoardData <- function() {
   
   
   #download html from url
-  #data = getURL(url,ssl.verifyHost=F,ssl.verifypeer=F)
+  data = getURL(url,ssl.verifyHost=F,ssl.verifypeer=F)
   
   #parse html content
-  #doc = htmlParse(data)
+  doc = htmlParse(data)
   
-  print("get html from test.html file")
-  doc = htmlParse(file = "test.html")
+  #print("get html from test.html file")
+  #doc = htmlParse(file = "test.html")
   
   #get board-name and board-title
   na.name = xpathApply(doc,"//div[@class='b-ent']//div[@class='board-name']",xmlValue)
